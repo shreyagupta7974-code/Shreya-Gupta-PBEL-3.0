@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Resume Analyzer </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+<span>Resume Screening Tool</span>
+
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/upload">Upload</a></li>
+
+<li><a href="/dashboard">Dashboard</a></li>
+
+<li><a href="/about">About</a></li>
+
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+
+<a href="/upload" class="start-btn">
+Get Started
+</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-left">
+<h1>
+
+Analyze Your Resume
+
+<br>
+
+Get Hired
+
+<span>Faster.</span>
+
+</h1>
+
+<p>
+
+Upload your resume and get ATS score,
+AI suggestions, missing skills,
+keyword matching and detailed report
+within seconds.
+
+</p>
+
+
+
+<div class="hero-buttons">
+
+
+<a href="/upload" class="upload button">
+
+<i class="fa-solid fa-upload"></i>
+
+<big>Upload Resume</big>
+
+</a>
+
+
+</div>
+
+
+
+
+<div class="features">
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<div>
+
+<h3>ATS Score</h3>
+
+<p>Accurate Resume Analysis</p>
+
+</div>
+
+</div>
+
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<div>
+
+<h3>AI Suggestions</h3>
+
+<p>Improve your Resume</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<div>
+
+<h3>Detailed Report</h3>
+
+<p>Complete Analysis</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<section class="stats">
+
+
+<div class="stat-box">
+
+<h2>5000+</h2>
+
+<p>Resumes Analyzed</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>90%</h2>
+
+<p>Accuracy</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>1000+</h2>
+
+<p>Happy Users</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>95%</h2>
+
+<p>Success Rate</p>
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

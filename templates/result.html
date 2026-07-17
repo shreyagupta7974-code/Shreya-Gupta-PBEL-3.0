@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block title %}
+Resume Analysis Result
+{% endblock %}
+
+{% block content %}
+
+<section class="result-page">
+
+    <div class="result-header">
+
+        <h1>Resume Analysis Report</h1>
+
+        <p>Your resume has been successfully analyzed.</p>
+
+    </div>
+
+    <div class="score-card">
+
+        <div class="score-circle">
+
+            <span>{{ result.ats_score }}%</span>
+
+        </div>
+
+        <h2>ATS Score</h2>
+
+        <h3>{{ result.quality }}</h3>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Candidate Information</h2>
+
+        <table class="info-table">
+
+            <tr>
+                <th>Name</th>
+                <td>{{ result.name }}</td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td>{{ result.email }}</td>
+            </tr>
+
+            <tr>
+                <th>Phone</th>
+                <td>{{ result.phone }}</td>
+            </tr>
+
+            <tr>
+                <th>LinkedIn</th>
+                <td>{{ result.linkedin }}</td>
+            </tr>
+
+            <tr>
+                <th>GitHub</th>
+                <td>{{ result.github }}</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills-box">
+
+            {% if result.skills %}
+
+                {% for skill in result.skills %}
+
+                    <span class="skill-tag">
+
+                        {{ skill }}
+
+                    </span>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>No Skills Found</p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <div class="grid-2">
+
+        <div class="mini-card">
+
+            <h3>Education</h3>
+
+            {% if result.education %}
+
+                <ul>
+
+                {% for item in result.education %}
+
+                    <li>{{ item }}</li>
+
+                {% endfor %}
+
+                </ul>
+
+            {% else %}
+
+                <p>Not Found</p>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="mini-card">
+
+            <h3>Projects</h3>
+
+            <p>
+
+            {% if result.projects %}
+
+                Available
+
+            {% else %}
+
+                Not Found
+
+            {% endif %}
+
+            </p>
+
+        </div>
+
+
+        <div class="mini-card">
+
+            <h3>Experience</h3>
+
+            <p>
+
+            {% if result.experience %}
+
+                Available
+
+            {% else %}
+
+                Not Found
+
+            {% endif %}
+
+            </p>
+
+        </div>
+
+
+        <div class="mini-card">
+
+            <h3>Certifications</h3>
+
+            <p>
+
+            {% if result.certifications %}
+
+                Available
+
+            {% else %}
+
+                Not Found
+
+            {% endif %}
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="card success">
+
+        <h2>Strengths</h2>
+
+        <ul>
+
+        {% for item in result.strengths %}
+
+            <li>{{ item }}</li>
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="card danger">
+
+        <h2>Weaknesses</h2>
+
+        <ul>
+
+        {% for item in result.weaknesses %}
+
+            <li>{{ item }}</li>
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+
+
+    <div class="card suggestion">
+
+        <h2>Suggestions</h2>
+
+        <ul>
+
+        {% for item in result.suggestions %}
+
+            <li>{{ item }}</li>
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="button-area">
+
+        <a href="{{ url_for('upload') }}" class="btn-primary">
+
+            Analyze Another Resume
+
+        </a>
+
+        <a href="{{ url_for('home') }}" class="btn-secondary">
+
+            Back Home
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

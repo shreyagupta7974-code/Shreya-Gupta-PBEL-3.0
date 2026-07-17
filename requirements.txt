@@ -1,0 +1,7 @@
+Flask
+pdfplumber
+PyMuPDF
+pandas
+numpy
+reportlab
+pypdf

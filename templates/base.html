@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Resume Screening Tool
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <span>Resume Screening Tool</span>
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="{{ url_for('home') }}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('upload') }}">
+                    Upload Resume
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('about') }}">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contact') }}">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <a href="{{ url_for('upload') }}"
+           class="start-btn">
+
+            Get Started
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+
+
+<main>
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+
+<div class="flash-box">
+
+{% for message in messages %}
+
+<div class="flash-message">
+
+{{ message }}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+{% endwith %}
+
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+
+<h3>
+
+Resume Screening Tool
+
+</h3>
+
+<p>
+
+Upload your resume and receive an ATS score, resume analysis,
+skill detection and AI-powered suggestions to improve your profile.
+
+</p>
+
+<div class="social-icons">
+
+<i class="fab fa-linkedin"></i>
+
+<i class="fab fa-github"></i>
+
+<i class="fab fa-instagram"></i>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Resume Screening Tool | All Rights Reserved
+
+</p>
+
+</div>
+<li>
+    <a href="{{ url_for('dashboard') }}">
+        Dashboard
+    </a>
+</li>
+
+</footer>
+
+</body>
+
+</html>

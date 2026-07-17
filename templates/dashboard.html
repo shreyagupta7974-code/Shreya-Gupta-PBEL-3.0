@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}
+Resume Insights
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <h1 class="dashboard-title">
+        Resume Screening Insights
+    </h1>
+
+    <p class="dashboard-subtitle">
+        Learn how your resume is evaluated and how to improve your ATS score.
+    </p>
+
+  
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>PDF Resume Upload</h2>
+            <p>Upload your resume in PDF format for automatic analysis.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fas fa-user-check"></i>
+            <h2>Profile Detection</h2>
+            <p>Name, Email, Phone, LinkedIn and GitHub are detected automatically.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fas fa-laptop-code"></i>
+            <h2>Skill Detection</h2>
+            <p>Technical skills are extracted from the resume.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fas fa-chart-line"></i>
+            <h2>ATS Score</h2>
+            <p>Your resume receives an ATS score based on important sections.</p>
+        </div>
+
+    </div>
+
+  
+
+    <div class="dashboard-box">
+
+        <h2>ATS Score Levels</h2>
+
+        <table class="dashboard-table">
+
+            <tr>
+                <th>Score</th>
+                <th>Performance</th>
+            </tr>
+
+            <tr>
+                <td>90 - 100</td>
+                <td>Excellent</td>
+            </tr>
+
+            <tr>
+                <td>75 - 89</td>
+                <td>Good</td>
+            </tr>
+
+            <tr>
+                <td>60 - 74</td>
+                <td>Average</td>
+            </tr>
+
+            <tr>
+                <td>Below 60</td>
+                <td>Needs Improvement</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Analysis Features -->
+
+    <div class="dashboard-box">
+
+        <h2>Resume Analysis Includes</h2>
+
+        <div class="dashboard-features">
+
+            <div class="feature">✔ Resume Text Extraction</div>
+
+            <div class="feature">✔ Candidate Information</div>
+
+            <div class="feature">✔ Skills Detection</div>
+
+            <div class="feature">✔ Education Detection</div>
+
+            <div class="feature">✔ Experience Detection</div>
+
+            <div class="feature">✔ Projects Detection</div>
+
+            <div class="feature">✔ Certifications Detection</div>
+
+            <div class="feature">✔ Achievements Detection</div>
+
+            <div class="feature">✔ Resume Quality</div>
+
+            <div class="feature">✔ AI Suggestions</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="dashboard-box">
+
+        <h2>Tips to Improve Your Resume</h2>
+
+        <ul class="tips-list">
+
+            <li>✔ Keep your resume limited to 1–2 pages.</li>
+
+            <li>✔ Include relevant technical skills.</li>
+
+            <li>✔ Mention internships and projects.</li>
+
+            <li>✔ Add certifications if available.</li>
+
+            <li>✔ Use a professional email address.</li>
+
+            <li>✔ Add LinkedIn and GitHub profile links.</li>
+
+            <li>✔ Keep formatting simple and ATS-friendly.</li>
+
+        </ul>
+
+    </div>
+
+  
+
+    <div class="dashboard-buttons">
+
+        <a href="{{ url_for('upload') }}" class="btn-primary">
+            Analyze Resume
+        </a>
+
+        <a href="{{ url_for('home') }}" class="btn-secondary">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
